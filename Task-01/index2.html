@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Keywords Example</title>
+</head>
+
+<body>
+    <script>
+        // Using 'var': Function-scoped variable
+        var a = "Muhammad"; // First declaration
+        var abc;            // Declares abc, initially undefined
+        var a = "faraz";    // Redeclared
+        console.log(a);     // Output: "faraz"
+        var a = "Mohammad"; // Redeclared again
+
+        // Function Scope with 'var'
+        function abc() {
+            var b = "Faraz";
+            console.log(b); // Output: "Faraz"
+        }
+        abc();
+
+        // Using 'let': Block-scoped variable
+        let c = "Initial Value";
+        // let c = "New Value"; // Error: Cannot redeclare 'c'
+        c = "Updated Value"; // Reassignment is allowed
+        console.log(c); // Output: "Updated Value"
+
+        // Block Scope with 'let'
+        {
+            let d = "Block Scoped";
+            console.log(d); // Output: "Block Scoped"
+        }
+        // console.log(d); // Error: d is not defined outside the block
+
+        // Using 'const': Block-scoped, constant value
+        const e = "Constant Value";
+        // e = "New Value"; // Error: Cannot reassign a const
+        console.log(e); // Output: "Constant Value"
+
+        // Block Scope with 'const'
+        {
+            const f = "Block Scoped Constant";
+            console.log(f); // Output: "Block Scoped Constant"
+        }
+        // console.log(f); // Error: f is not defined outside the block
+
+
+    </script>
+</body>
+
+</html>
