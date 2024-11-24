@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Sheet</title>
+</head>
+
+<body>
+    <script>
+        // Define constant for total marks per subject
+        const TOTAL_MARKS_PER_SUBJECT = 100;
+        const TOTAL_SUBJECTS = 5; // Total number of subjects
+        const MAX_TOTAL_MARKS = TOTAL_MARKS_PER_SUBJECT * TOTAL_SUBJECTS; // Total possible marks
+
+        // Marks for subjects
+        let math = +prompt("Enter marks for Math: ");
+        let science = +prompt("Enter marks for Science: ");
+        let english = +prompt("Enter marks for English: ");
+        let history = +prompt("Enter marks for History: ");
+        let computer = +prompt("Enter marks for Computer: ");
+
+        // Calculate total marks obtained
+        let totalMarksObtained = math + science + english + history + computer;
+
+        // Calculate percentage
+        let percentage = (totalMarksObtained / MAX_TOTAL_MARKS) * 100;
+
+        // Determine grade
+        let grade = 
+        (percentage >= 90) ? "A+" :
+        (percentage >= 80) ? "A" :
+        (percentage >= 70) ? "B" :
+        (percentage >= 60) ? "C" :
+        (percentage >= 50) ? "D" : "F";
+
+        // Display results using template literals
+        document.write(`
+            <h1>Mark Sheet</h1>
+            <p>Total Marks: ${MAX_TOTAL_MARKS}</p>
+            <p>Marks Obtained: ${totalMarksObtained}</p>
+            <p>Percentage: ${percentage.toFixed(2)}%</p>
+            <p>Grade: ${grade}</p>
+        `);
+    </script>
+</body>
+</html>
