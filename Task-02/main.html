@@ -61,66 +61,7 @@
     </div>
 
 
-    <script src="app.js">
-        
-
-        // Populate Brand Dropdown
-        const brandSelect = document.getElementById("brand");
-        const modelSelect = document.getElementById("model");
-        const searchButton = document.getElementById("searchButton");
-        const resultDiv = document.getElementById("result");
-
-        for (let brand in mobileData) {
-            const option = document.createElement("option");
-            option.value = brand;
-            option.textContent = brand;
-            brandSelect.appendChild(option);
-        }
-
-        // Handle Brand Selection
-        brandSelect.addEventListener("change", function () {
-            const selectedBrand = this.value;
-            modelSelect.innerHTML = `<option value="">-- Select Model --</option>`;
-            modelSelect.disabled = true;
-            searchButton.disabled = true;
-
-            if (selectedBrand) {
-                const models = Object.keys(mobileData[selectedBrand]);
-                models.forEach(model => {
-                    const option = document.createElement("option");
-                    option.value = model;
-                    option.textContent = model;
-                    modelSelect.appendChild(option);
-                });
-                modelSelect.disabled = false;
-            }
-        });
-
-        // Enable Search Button when Model is Selected
-        modelSelect.addEventListener("change", function () {
-            searchButton.disabled = !this.value;
-        });
-
-        // Handle Search Button Click
-        searchButton.addEventListener("click", function () {
-            const selectedBrand = brandSelect.value;
-            const selectedModel = modelSelect.value;
-
-            if (selectedBrand && selectedModel) {
-                const modelData = mobileData[selectedBrand][selectedModel];
-                resultDiv.innerHTML = `
-                    <h2>${selectedBrand.toUpperCase()} - ${selectedModel.toUpperCase()}</h2>
-                    <p><strong>Processor:</strong> ${modelData.processor}</p>
-                    <p><strong>RAM:</strong> ${modelData.memory.ram}GB</p>
-                    <p><strong>Storage:</strong> ${modelData.memory.storage}GB</p>
-                    <p><strong>Battery:</strong> ${modelData.battery}mAh</p>
-                    <p><strong>Operating System:</strong> ${modelData.operatingSystem}</p>
-                    <p><strong>Special Features:</strong> ${modelData.specialFeatures.join(", ")}</p>
-                `;
-                resultDiv.style.display = "block";
-            }
-        });
-    </script>
+    <script src="app.js"> </script>
 </body>
 
 </html>
