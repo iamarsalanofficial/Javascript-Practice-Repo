@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>GitHub User Finder</h1>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="username" placeholder="Search GitHub username..." />
+        <button id="search-btn">Search</button>
+    </div>
+
+    <!-- Profile Card -->
+    <div class="profile-card" id="profile-card">
+        <!-- Left (Image) -->
+        <div class="profile-left">
+            <img id="avatar" src="img/avatar.jpg" alt="Profile Image">
+        </div>
+
+        <!-- Right (Details) -->
+        <div class="profile-right">
+            <h2 id="name">User Name</h2>
+            <a id="username-link" href="#" target="_blank">@username</a>
+            <p id="bio">This user has no bio.</p>
+
+            <!-- Stats -->
+            <div class="stats">
+                <div>
+                    <span id="repos">0</span>
+                    <p>Repos</p>
+                </div>
+                <div>
+                    <span id="followers">0</span>
+                    <p>Followers</p>
+                </div>
+                <div>
+                    <span id="following">0</span>
+                    <p>Following</p>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="profile-footer">
+                <div id="location">📍 Location</div>
+                <div id="blog">🔗 Blog</div>
+                <div id="company">🏢 Company</div>
+            </div>
+        </div>
+    </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

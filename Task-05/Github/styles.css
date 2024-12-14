@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #141d2f;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Search Bar */
+.search-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background-color: #1e2a47;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.search-container button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background-color: #0079ff;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Card Container */
+.profile-card {
+  display: none;
+  width: 100%;
+  max-width: 600px;
+  background-color: #1e2a47;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  color: #ffffffb3;
+  margin-top: 10px;
+}
+
+.profile-left {
+  margin-right: 20px;
+}
+
+.profile-left img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.profile-right {
+  flex: 1;
+}
+
+.profile-right h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.profile-right a {
+  font-size: 1rem;
+  color: #0079ff;
+  text-decoration: none;
+  display: block;
+  margin-top: 5px;
+}
+
+.profile-right p {
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  background-color: #141d2f;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats span {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.profile-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 40px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
